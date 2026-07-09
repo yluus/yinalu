@@ -2,6 +2,7 @@
 // Fetches portfolios on load, renders each with positions + P&L, and supports
 // creating a new portfolio (which the backend answers after a short delay).
 
+const baseUrl = "http://localhost:3001";
 const fmt = (n) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD" });
 
@@ -50,7 +51,7 @@ function renderPortfolios(portfolios) {
 }
 
 function loadPortfolios() {
-  return fetch("/api/portfolios")
+  return fetch(baseUrl + "/api/portfolios")
     .then((r) => r.json())
     .then(renderPortfolios)
     .catch(() => {
@@ -73,7 +74,7 @@ function setupForm() {
     submit.disabled = true;
     status.textContent = "Saving…";
 
-    fetch("/api/portfolios", {
+    fetch(baseUrl + "/api/portfolios", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, cashBalance }),
