@@ -3,21 +3,21 @@
 Document each issue you found and fixed. Add or remove sections as needed
 (there are three issues to find).
 
-## Issue 1
+## Issue 1 The fetch url should be whole, not partial under app.js
 
 - **Symptom:** (what failed, and how — e.g. error message, flaky vs. consistent)
 - **Root cause:** (why it actually happened)
 - **Fix location:** (test or app? which file/line?)
 - **How I verified:** (what you ran to confirm it's fixed and stays fixed)
 
-## Issue 2
+## Issue 2 Add missing piece to call event handler and post api from index.html
 
 - **Symptom:**
 - **Root cause:**
 - **Fix location:**
 - **How I verified:**
 
-## Issue 3
+## Issue 3 Cypress.config('baseUrl', null); => Need to turn it off in order to load index.html correctly under dashboard.cy.ts
 
 - **Symptom:**
 - **Root cause:**
