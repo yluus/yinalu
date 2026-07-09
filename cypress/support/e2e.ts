@@ -5,4 +5,29 @@
 // The API exposes POST /api/admin/reset for exactly this purpose. Part of the
 // exercise is deciding where/whether to call it.
 
-export {};
+export function getBaseUrl() {
+    return "http://localhost:3001";
+}
+
+export async function startBrowser(
+): Promise<void> {
+    Cypress.config('baseUrl', null);
+   // cy.visit("/");
+    cy.visit('./app/public/index.html');
+}
+
+export function waitLong(
+){
+   cy.wait(50000);
+}
+
+export function waitMedium(
+){
+   cy.wait(25000);
+}
+
+export function waitShort(
+) {
+   cy.wait(12000);
+}
+
