@@ -28,7 +28,7 @@
     <form id="create-form" data-cy="create-form">
       <input data-cy="name-input" name="name" placeholder="Portfolio name" required />
       <input data-cy="cash-input" name="cashBalance" type="number" placeholder="Cash balance" value="10000" />
-      <button data-cy="create-submit" type="submit">Create portfolio</button>
+      <button data-cy="create-submit" type="submit" onclick="setupForm()">Create portfolio</button>
       <span id="status" data-cy="status"></span>
     </form>
 
@@ -36,6 +36,6 @@
       <p class="loading" data-cy="loading">Loading portfolios…</p>
     </div>
 
-    <script src="/app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
