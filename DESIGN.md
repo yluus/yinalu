@@ -13,7 +13,18 @@ welcome but optional.
 ```
 
 Notes:
--
+
+1. Command to run: 
+   npx cypress run --spec "cypress/e2e/dashboard.cy.ts" --headed --browser chrome
+
+2. Need to install json-server to mock the api with multiple levels of end points
+   npm -g install json-server@v0.x
+
+3. Start mock server:
+   json-server -p 3001 --watch cypress/fixtures/server.json --routes cypress/fixtures/routes.json
+
+4. Both server.json and routes.json are under the directory: cypress\fixtures
+
 
 ## 2. Failure summary to Slack (or structured JSON for alerting)
 
